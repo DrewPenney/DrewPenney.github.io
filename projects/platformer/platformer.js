@@ -40,29 +40,39 @@ $(function () {
     /////////////////////////////////////////////////
 
     // TODO 1
-     createPlatform(400,200,100,34); // short but wide platform located 400 pixels from the left of the screen and 200 pixels from the top of the screen
-
-
-
-    
-    // TODO 2
-    // Create collectables
-    // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
-    // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
-    // example usage: createCollectable(type, x, y, gravity, bounce)
-
-
-
-
+     createPlatform(150,270,100,34); // short but wide platform located 400 pixels from the left of the screen and 200 pixels from the top of the screen
+     createPlatform(300,650,200,30); // short but wide platform located 400 pixels from the left of the screen and 200 pixels from the top of the screen
+     createPlatform(600,525,100,34); // short but wide platform located 400 pixels from the left of the screen and 200 pixels from the top of the screen
+     createPlatform(300,400,100,34); // short but wide platform located 400 pixels from the left of the screen and 200 pixels from the top of the screen
+     createPlatform(30,180,80,30); // short but wide platform located 400 pixels from the left of the screen and 200 pixels from the top of the screen
+     createPlatform(650,350,200,29); // short but wide platform located 400 pixels from the left of the screen and 200 pixels from the top of the screen
+     createPlatform(450,270,100,34); // short but wide platform located 400 pixels from the left of the screen and 200 pixels from the top of the screen
+     createPlatform(1000,230,100,34); // short but wide platform located 400 pixels from the left of the screen and 200 pixels from the top of the screen
+     createPlatform(750,100,100,34); // short but wide platform located 400 pixels from the left of the screen and 200 pixels from the top of the screen
+     createPlatform(100,520,100,30); // short but wide platform located 400 pixels from the left of the screen and 200 pixels from the top of the screen
+     createPlatform(1200,470,100,34); // short but wide platform located 400 pixels from the left of the screen and 200 pixels from the top of the screen
+     createPlatform(900,600,250,34); // short but wide platform located 400 pixels from the left of the screen and 200 pixels from the top of the screen
+     createPlatform(1300,350,100,34); // short but wide platform located 400 pixels from the left of the screen and 200 pixels from the top of the screen
+     // TODO 2
+     createCollectable("database", 700, 310); 
+     createCollectable("database", 130, 480);
+     createCollectable("database", 1300, 310);
+     createCollectable("database", 800, 60);
+     createCollectable("database", 940, 560);
+     createCollectable("database", 200, 230);
+     createCollectable("database", 330, 360);
+     createCollectable("database", 400, 610);
+     createCollectable("database", 490, 230);
+     createCollectable("database", 640, 485);
+     createCollectable("database", 1030, 190);
+     createCollectable("database", 1230, 430);
     // TODO 3
-    // Create cannons
-    // You must decide the wall you want the cannon on, the position on the wall, and the time between shots in milliseconds
-    // Your wall choices are: 'top' 'left' 'right' and 'bottom'
-    // example usage: createCannon(side, position, delay, width, height)
-
-
-
-
+    createCannon("left", 555, 1000); // cannon on left wall, 600px down, shooting once per second
+    createCannon("left", 305, 1000); // cannon on left wall, 400px down, shooting once per 2 seconds
+    createCannon("right", 775, 1000); // cannon on left wall, 600px down, shooting once per second
+    createCannon("top", 335, 1000); // cannon on left wall, 600px down, shooting once per second
+    createCannon("bottom", 845, 1000); // cannon on left wall, 600px down, shooting once per second
+    createCannon("right", 95, 1000); // cannon on left wall, 600px down, shooting once per second
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
     /////////////////////////////////////////////////
