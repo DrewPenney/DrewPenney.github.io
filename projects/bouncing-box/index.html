@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: rgb(21, 6, 243);
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -61,30 +61,38 @@
 			/////////////////// YOUR CODE BELOW HERE /////////////////////////
 			//////////////////////////////////////////////////////////////////
 			
-			// TODO 2 - Variable declarations 
-			
-
-			
-			/* 
-			This Function will be called 20 times/second. Each time it is called,
-			it should move the Box to a new location. If the box drifts off the screen
-			turn it around! 
-			*/
+			var positionX = 0;
+           var points = 0;
+			var speed = 10;
+		
 			function update() {
-				
+				positionX = positionX + speed;
+				 moveBoxTo(positionX);
 
+				  
+				if (positionX > 1350){
+					speed = -speed;
+                    speed *= -1;
+                    speed = speed * -1;
+				}      
+				if (positionX  < 0){
+					speed = -speed;
+                    speed *= 1;
+                    speed = speed * 1;
+				}
 			};
 
-			/* 
-			This Function will be called each time the box is clicked. Each time it is called,
-			it should increase the points total, increase the speed, and move the box to
-			the left side of the screen.
-			*/
 			function handleBoxClick() {
-				
-
-
+				speed++ ;20;
+				positionX = 0;
+			    points++ ;1;
+				changeBoxText(points);
 			};
+
+
+
+
+
 		})();
 	</script>
 </body>
