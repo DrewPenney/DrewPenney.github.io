@@ -10,6 +10,7 @@
 			height: 70px;
 			background-color: rgb(21, 6, 243);
 			font-size: 300%;
+			color: rgb(255, 255, 255); 
 			text-align: center;
 			user-select: none;
 			display: block;
@@ -42,7 +43,7 @@
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
 
 			// Every 50 milliseconds, call the update Function (see below)
-			setInterval(update, 50);
+			var Interval = setInterval(update, 50);
 			
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
 			box.on('click', handleBoxClick);
