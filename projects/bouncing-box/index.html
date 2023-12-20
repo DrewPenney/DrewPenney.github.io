@@ -17,7 +17,7 @@
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 0%;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
@@ -42,7 +42,6 @@
 			var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
-            Math.random()
 
 			// Every 50 milliseconds, call the update Function (see below)
 			var interval = setInterval(update, 50);
@@ -70,30 +69,30 @@
 			
 		   var positionX = 0;
            var points = 0;
-		   var speed = 10;
 		   var positionY = 300;
-		   var speedY = 10;
-		   var randNum = Math.random() * 100;
+		   var speed = 10;
 			function update() {
 				positionX = positionX + speed;
-				moveBoxTo(positionX, positionY);
-                math.random = 0 - 1350;
+				moveBoxTo(positionX);
 				  
 				if (positionX > 1350){
 					speed = -speed;
-                    speed *= -1;
-                    speed = speed * -1;
+					speed *= 1;
+                    speed = speed * 1;
+
 				}      
 				if (positionX  < 0){
 					speed = -speed;
-                    speed *= 1;
-                    speed = speed * 1;	
+					speed *= -1;
+                    speed = speed * -1;
+
 				} 
 			};
 
 			function handleBoxClick() {
 				speed++ ;20;
 				positionX = 0;
+				positionY = 30;
 			    points++ ;1;
 				changeBoxText(points);
 			};
