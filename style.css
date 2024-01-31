@@ -7,6 +7,7 @@ body {
 #all-contents {
   max-width: 800px;
     margin: auto;
+    max-height: max-content;
 }
 
 /* navigation menu */
