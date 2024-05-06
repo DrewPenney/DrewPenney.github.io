@@ -1,6 +1,6 @@
 body {
-    background-image: linear-gradient(#f58b57, #382cd8);
-    color: rgb(20, 65, 187);
+    background-image: linear-gradient(#382cd8,  #921403);
+    color: rgb(56, 44, 216);
     padding: 10px;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -8,11 +8,11 @@ body {
   max-width: 800px;
     margin: auto;
     max-height: max-content;
-}
+}  #f58b57
 
 /* navigation menu */
 nav {
-    background: rgb(146, 20, 3);
+    background:#921403;
    margin: 0 auto;
    margin-bottom: 20px;
     display: flex;
