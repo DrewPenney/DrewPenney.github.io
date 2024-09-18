@@ -1,5 +1,6 @@
 body {
     background-image: linear-gradient(#382cd8,  #921403);
+    background-attachment: fixed;
     color: rgb(56, 44, 216);
     padding: 10px;
     font-family: 'Courier New', Courier, monospace;
