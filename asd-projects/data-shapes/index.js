@@ -46,16 +46,16 @@ $(document).ready(function () {
  dataShapes.push(shape)
   // TODO 2: add a new property to all data shapes (must ask how to do this)
 
-  for(var i = 0; i < dataShapes.length, i++;){
+  for(var i = 0; i < dataShapes.length; i++){
     var currentShape = dataShapes[i]
-      } if (currentShape.color === 'red'){
+       if (currentShape.color === 'red'){
          currentShape.goodBehavior = 'bounce'
       } else if (currentShape.color === 'blue'){
          currentShape.goodBehavior = 'blink'
       } else {
          currentShape.goodBehavior = 'spin'
       }
-
+    }
   // TODO 3-a: add a function that handles the static display type
   function handleStatic(data){
     setBackgroundWithObject(data)
