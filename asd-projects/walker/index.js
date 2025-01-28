@@ -17,7 +17,7 @@ function runProgram(){
 
   // Game Item Objects
 var KEY = {
-  LEFT: 37, RIGHT: 39, UP: 38, DOWN: 40,
+  left: 37, right: 39, top: 40, bottom: 38,
 };
 
   // one-time setup
@@ -33,7 +33,8 @@ var KEY = {
   by calling this function and executing the code inside.
   */
   function newFrame() {
-    
+    redrawGameItem()
+    repositionGameItem()
 
   }
   
@@ -41,16 +42,17 @@ var KEY = {
   Called in response to events.
   */
   function handleKeyDown(event){
-    if (event.which === KEY.LEFT){
+    if (event.which === KEY.left){
       WALKER.XSPEED = -5;
-    } else if (event.which === KEY.RIGHT){
+    } else if (event.which === KEY.right){
       WALKER.XSPEED = 5;
-    } else if (event.which === KEY.UP){
+    }  else if (event.which === KEY.top){
       WALKER.YSPEED = 5;
-    } else if (event.which === KEY.DOWN){
+    }  else if (event.which === KEY.bottom){
       WALKER.YSPEED = -5;
-    }
+    } 
 }
+console.log();
 
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
@@ -61,10 +63,10 @@ var KEY = {
   WALKER.YCOORDINATE += WALKER.YSPEED
   }
   function redrawGameItem(){
-    $(WALKER).css("LEFT", WALKER.XCOORDINATE)
-    $(WALKER).css("RIGHT", WALKER.XCOORDINATE)
-    $(WALKER).css("UP", WALKER.YCOORDINATE)
-    $(WALKER).css("DOWN", WALKER.YCOORDINATE)
+    $("#walker").css("left", WALKER.XCOORDINATE)
+    $("#walker").css("right", WALKER.XCOORDINATE)
+    $("#walker").css("top", WALKER.YCOORDINATE)
+    $("#walker").css("bottom", WALKER.YCOORDINATE)
   }
 
   function endGame() {
