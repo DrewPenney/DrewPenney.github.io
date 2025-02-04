@@ -19,7 +19,6 @@ function runProgram(){
 var KEY = {
   left: 37, right: 39, top: 40, bottom: 38,
 };
-
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
   $(document).on('keydown', handleKeyDown);                           // change 'eventType' to the type of event you want to handle
@@ -33,24 +32,24 @@ var KEY = {
   by calling this function and executing the code inside.
   */
   function newFrame() {
-    redrawGameItem()
     repositionGameItem()
-
+    wallCollision()
+    redrawGameItem()
+    handleKeyUp()
   }
-  
   /* 
   Called in response to events.
   */
   function handleKeyDown(event){
     if (event.which === KEY.left){
       WALKER.XSPEED = -5;
-    } else if (event.which === KEY.right){
+    }  if (event.which === KEY.right){
       WALKER.XSPEED = 5;
-    }  else if (event.which === KEY.top){
+    }  if (event.which === KEY.top){
       WALKER.YSPEED = 5;
-    }  else if (event.which === KEY.bottom){
+    }  if (event.which === KEY.bottom){
       WALKER.YSPEED = -5;
-    } 
+    }  
 }
 console.log();
 
@@ -68,7 +67,14 @@ console.log();
     $("#walker").css("top", WALKER.YCOORDINATE)
     $("#walker").css("bottom", WALKER.YCOORDINATE)
   }
-
+function handleKeyUp(){
+  WALKER.XSPEED = 0
+  WALKER.YSPEED = 0
+}
+function wallCollision(){
+$("#board").height(600)
+$("#board").width(600)
+}
   function endGame() {
     // stop the interval timer
     clearInterval(interval);
